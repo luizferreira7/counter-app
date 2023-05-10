@@ -1,6 +1,7 @@
 {
   "name": "counter",
   "version": "1.0.0",
+  "homepage": "https://luizferreira7.github.io/counter-app",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -10,15 +11,20 @@
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^3.1.2",
     "bootstrap": "4.1.1",
+    "font-awesome": "^4.7.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.5",
-    "font-awesome": "^4.7.0"
+    "react-scripts": "1.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
