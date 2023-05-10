@@ -5,7 +5,6 @@ class Counters extends React.Component {
 
   constructor(props) {
       super(props);
-      console.log("Counters constructor: props", props);
   }
 
   render() {

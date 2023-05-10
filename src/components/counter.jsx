@@ -4,24 +4,17 @@ class Counter extends React.Component {
 
   constructor(props) {
       super(props);
-      console.log("Counter constructor: props", props);
   }
 
   componentDidUpdate(prevProps, prevState) {
       if (prevProps.counter.value !== this.props.counter.value) {
-
-          console.log("componentDidUpdate: Ajax has been called");
-          console.log(`prevProps: ${prevProps.counter.value}`);
-          console.log(`Props: ${this.props.counter.value}`);
       }
   }
 
   componentWillUnmount() {
-      console.log("Counter - Unmount");
   }
 
   render() {
-      console.log("Counter: props", this.props);
       const { counter, onIncrement, onDecrement, onDelete } = this.props;
       return (
           <div className="counter">

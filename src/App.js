@@ -32,8 +32,6 @@ class App extends React.Component {
 
   handleIncrement = (counter) => {
 
-    console.log("Increment", counter);
-
     const counters = [...this.state.counters];
 
     const index = counters.indexOf(counter);
@@ -47,8 +45,6 @@ class App extends React.Component {
   };
 
   handleDecrement = (counter) => {
-
-    console.log("Decrement", counter);
 
     const counters = [...this.state.counters];
 
@@ -77,8 +73,6 @@ class App extends React.Component {
   };
 
   handleDelete = (counterId) => {
-
-    console.log("Event Handler Called", counterId);
 
     const counters = this.state.counters.filter((c) => c.id !== counterId);
 
