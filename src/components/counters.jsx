@@ -9,20 +9,34 @@ class Counters extends React.Component {
   }
 
   render() {
-      const { counters, onReset, onDelete, onIncrement, onDecrement } =
+      const { counters, onReset, onDelete, onIncrement, onDecrement, onNewCounter, onRemoveUltimoCounter } =
           this.props;
-      return (
+      return [(
           <div>
               <button
                   onClick={onReset}
                   className="btn btn-primary btn-sm m-2"
               >
-                  Reset
+                  Reiniciar Contadores
               </button>
+              <button
+                  onClick={onNewCounter}
+                  className="btn btn-primary btn-sm m-2"
+              >
+                  Adicionar Contador
+              </button>
+
+              <button
+                  onClick={onRemoveUltimoCounter}
+                  className="btn btn-primary btn-sm m-2"
+              >
+                  Remover Ultimo
+              </button>
+
               {counters.map((counter) => (
                   <Counter
                       key={counter.id}
-                      // Counter component raises these events and we are bubbling them up to its parent
+
                       onDelete={onDelete}
                       onIncrement={onIncrement}
                       onDecrement={onDecrement}
@@ -32,7 +46,8 @@ class Counters extends React.Component {
                   </Counter>
               ))}
           </div>
-      );
+          
+      )];
   }
 }
 
