@@ -23,7 +23,7 @@
 }
 
 .counter {
-  gap: 4vw;
+  gap: 2em;
   align-content: center;
   display: flex;
 }
