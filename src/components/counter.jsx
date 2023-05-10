@@ -9,7 +9,7 @@ class Counter extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
       if (prevProps.counter.value !== this.props.counter.value) {
-          // Ajax call and get new data from the server
+
           console.log("componentDidUpdate: Ajax has been called");
           console.log(`prevProps: ${prevProps.counter.value}`);
           console.log(`Props: ${this.props.counter.value}`);
@@ -24,19 +24,15 @@ class Counter extends React.Component {
       console.log("Counter: props", this.props);
       const { counter, onIncrement, onDecrement, onDelete } = this.props;
       return (
-          <div className="row">
-              {/* jump line after counterid: 2) */}
-              <div className="w-100">{this.props.children}</div>
+          <div className="counter">
+              <div className="d-flex align justify-content-center mt-2 w10">{this.props.children}</div>
 
-              {/* break point medium (720px) */}
-              {/* .col-xs-* classes, create a basic grid system that starts out stacked on */}
-              {/* extra small sizes and becomes horizontal at the small breakpoint (sm). */}
-              <div className="col-sm-1">
+              <div className="d-flex align w30">
                   <span className={this.getBadgeClasses()}>
                       {this.formatCount()}
                   </span>
               </div>
-              <div className="col">
+              <div className="col w60">
                   <button
                       type="button"
                       className="btn btn-secondary btn-sm"
@@ -45,7 +41,6 @@ class Counter extends React.Component {
                       <span className="fa fa-plus"></span>
                   </button>
 
-                  {/* m-3 is the marging */}
                   <button
                       type="button"
                       className="btn btn-secondary btn-sm m-3"
@@ -68,7 +63,7 @@ class Counter extends React.Component {
   }
 
   getBadgeClasses() {
-      let classes = "badge m-2 bg-";
+      let classes = "badge bg-";
       classes += this.props.counter.value === 0 ? "warning" : "primary";
       return classes;
   }

@@ -22,7 +22,34 @@
   font-size: large;
 }
 
+.counter {
+  gap: 4vw;
+  align-content: center;
+  display: flex;
+}
+
+.align {
+  align-items: center;
+  align-content: center;
+}
+
+.w10{
+  width: 20%;
+}
+
+.w30{
+  width: 20%;
+}
+
+.w60{
+  width: 60%;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+#root {
+  height: 100%;
 }
